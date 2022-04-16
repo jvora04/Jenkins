@@ -10,17 +10,17 @@ pipeline {
                 sh "git clone https://github.com/jvora04/Jenkins.git"
             }
         }
-        //stage('build'){
-            //steps{
+        stage('build'){
+            steps{
                 //sh "docker login -u ***** -p **********"
-                //sh '''cd git_prac_exe/ && $pwd &&
-                    //docker build -t jenkins:cicd .'''
-            //}
-        //}
-        //stage('run'){
-            //steps{
-                //sh "docker run -d -p 3000:3000 jenkins:cicd"
-            //}
-        //}
+                //sh '''cd git_prac_exe/ && $pwd && '''
+                  sh ''' docker build -t jenkins:cicd .'''
+            }
+        }
+        stage('run'){
+            teps{
+                sh "docker run -d -p 3000:3000 jenkins:cicd"
+            }
+        }
     }
 }
