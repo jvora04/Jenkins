@@ -5,7 +5,7 @@ app.get('/healthcheck', (req, res)=>{
     if(process.env.ENV_NODE === "production")
         res.status(200).send({"code": 2000, "msg": "Production Mode: Healthcheck is success!"})
     else
-        res.status(200).send({"code": 2000, "msg": "Local Mode: Healthcheck is success!"})
+        res.status(200).send({"code": 2000, "msg": "Local Mode: Healthcheck is success1...!"})
 })
 
 app.listen(3000, () =>{
