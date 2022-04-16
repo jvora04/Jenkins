@@ -18,10 +18,10 @@ pipeline {
                 sh "docker build -t jenkins:cicd ."
             }
         }
-        stage('run'){
-            steps{
-                sh "docker run -d -p 3000:3000 jenkins:cicd"
-            }
-        }
+        //stage('run'){
+           // steps{
+                //sh "docker run -d -p 3000:3000 jenkins:cicd"
+            //}
+        //}
     }
 }
