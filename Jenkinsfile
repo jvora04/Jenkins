@@ -14,7 +14,8 @@ pipeline {
             steps{
                 //sh "docker login -u ***** -p **********"
                 //sh '''cd git_prac_exe/ && $pwd && '''
-                  sh ''' docker build -t jenkins:cicd .'''
+                sh "cd Jenkins"
+                sh "docker build -t jenkins:cicd ."
             }
         }
         stage('run'){
