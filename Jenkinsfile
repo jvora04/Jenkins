@@ -16,8 +16,8 @@ pipeline {
                 //sh '''cd git_prac_exe/ && $pwd && '''
                 //sh "cd Jenkins"
                 //sh "docker build -t jenkins:cicd ."
-            }
-        }
+            //}
+        //}
         //stage('run'){
            // steps{
                 //sh "docker run -d -p 3000:3000 jenkins:cicd"
